@@ -1,0 +1,105 @@
+<!--
+* Created with JetBrains PhpStorm.
+* User: Alexander Galych
+* email: galych@zfort.com
+* Date: 7/24/13
+* Time: 12:04 PM
+* To change this template use File | Settings | File Templates.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Galych Education Project</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="css/jquery-ui.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="css/jquery.ui.datepicker.css" type="text/css" media="screen" charset="utf-8" />
+        <script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.js"></script>
+        <script type="text/javascript" src="js/additional-methods.js"></script>
+        <script type="text/javascript" src="js/jquery.footerPosition.js"></script>
+        <script type="text/javascript" src="js/jquery.showPopup.js"></script>
+        <script type="text/javascript" src="js/jquery.popupValidate.js"></script>
+        <script type="text/javascript" src="js/jquery.lists.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </head>
+    <body>
+        <div class="popup-background"></div>
+        <div class="popup-window">
+            <h2>Popup Window</h2>
+            <form class="cmxform" id="popupForm">
+                <ul class="popup-window-fields-errors"></ul>
+                <div class="popup-window-fields">
+                    <table id="popup-table">
+                        <col width="100">
+                        <col width="130">
+                        <col width="20">
+                        <col width="100">
+                        <tr>
+                            <td>First Name:</td>
+                            <td colspan="3">
+                                <input type="text" id="fname" name="fname" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Last Name:</td>
+                            <td colspan="3">
+                                <input type="text" id="lname" name="lname" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Date Of Birth:</td>
+                            <td colspan="3">
+                                <input type="text" id="birthday" name="birthday" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>City:</td>
+                            <td colspan="3"><input type="text" name="city" /></td>
+                        </tr>
+                        <tr>
+                            <td>Country:</td>
+                            <td colspan="3"><select>
+                                    <option value="1" autofocus>---</option>
+                                    <option value="2">Ukraine</option>
+                                    <option value="3">USA</option>
+                                    <option value="4">UK</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>From:</td>
+                            <td>
+                                <input type="text" id="from-date" class="range-date" name="from" />
+                            </td>
+                            <td>To:</td>
+                            <td>
+                                <input type="text" id="to-date" class="range-date" name="to" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+            <div class="popup-window-btns-container">
+                <div class="popup-window-btns">
+                    <div class="ok-button" id="popup-ok-btn">OK</div>
+                    <div class="cancel-button" id="popup-cnc-btn">Cancel</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="article">
+            <div class="content">
+                <div class="modalLink">
+                    <a href="javascript:;" class="popup">Click for Modal</a>
+                </div>
+                <div class="list-content"></div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+</html>

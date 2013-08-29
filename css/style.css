@@ -1,0 +1,370 @@
+/**
+ * Created with JetBrains PhpStorm.
+ * User: Alexander Galych
+ * email: galych@zfort.com
+ * Date: 7/24/13
+ * Time: 12:04 PM
+ * To change this template use File | Settings | File Templates.
+ */
+
+div{
+    margin:0;
+    padding:0;
+}
+
+html, body, #article, header{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+    margin: 0px;
+    background: #f2f2f2;
+    font-family: Verdana;
+    font-size: 16px;
+    overflow:auto;
+}
+
+html{
+    min-height: 100%;
+    height: 100%;
+}
+
+html body{
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Style for Popup Window */
+
+html body .popup-background,
+html body .popup-background-ie{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#ffffff'); /* IE shit */
+    z-index: 1000000;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+
+html body .popup-window{
+    position: fixed;
+    width: 400px;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    margin: -250px 0px 0px -210px;
+    z-index: 10100000;
+    display: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.errorHighlight {
+    border: 2px solid #CC0000;
+}
+
+.popup-window .popup-window-fields-errors{
+    color: #ff0000;
+    font-size: 14px;
+    text-align: left;
+}
+
+.popup-window .popup-window-fields{
+    text-align: left;
+}
+
+.popup-window .popup-window-fields table td{
+    overflow: hidden;
+}
+
+.popup-window .popup-window-fields label{
+    display: none;
+    color: #ff0000;
+    font-size: 13px;
+    display: inline;
+}
+
+.popup-window .popup-window-fields .range-date{
+    width: 100px;
+}
+
+.popup-window .popup-window-fields input,
+.popup-window .popup-window-fields select{
+    width: 98%;
+}
+
+.popup-window .popup-window-btns-container{
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.popup-window .popup-window-btns-container .popup-window-btns{
+    float:right;
+    overflow: hidden;
+}
+
+#article .list .new-item .new-item-button,
+#article .list-content .new-list .new-list-button,
+.popup-window .popup-window-btns-container .popup-window-btns .ok-button,
+.popup-window .popup-window-btns-container .popup-window-btns .cancel-button{
+    width: 60px;
+    text-align: center;
+    padding: 5px;
+    background-color: #64FE2E;
+    float: left;
+    margin-right: 10px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.popup-window .popup-window-btns-container .popup-window-btns .cancel-button{
+    margin-right: 0px;
+    background-color: #FF0000;
+}
+
+/* End Style for Popup Window */
+
+
+/* Style for List */
+
+#article .list .list-container,
+#article .list .list-name,
+#article .list-content,
+#article .list-content .new-list,
+#article .list .new-item{
+    border: solid 1px #999999;
+    border-bottom: none;
+    padding: 20px;
+}
+
+#article .list .list-container{
+    border-top: none;
+}
+
+#article .list .list-name{
+    border-bottom: solid 1px #999999;
+}
+
+#article .list-content .new-list{
+    padding-left: 0px;
+}
+
+#article .list .list-name{
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#article .list .list-name .name{
+    float: left;
+}
+
+#article .list{
+    margin-bottom: 5px;
+    background-color: #d7d7d7;
+}
+
+#article .list .list-items{
+    background-color: #EFEFEF;
+}
+
+#article .list-content{
+    padding: 0px;
+    border: solid 1px #999;
+    margin: 0px 0px 30px 30px;
+    background-color: #fff;
+}
+
+.list .list-container .list-item{
+    overflow: hidden;
+    width: 470px;
+    height: 40px;
+    margin-bottom: 10px;
+}
+
+.list .list-container .list-item .list-item-text{
+    width: 400px;
+    padding: 10px;
+    background: rgba(0,0,255,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#0000ff', endColorstr='#0000ff'); /* IE shit */
+    border-radius: 5px;
+    color: #fff;
+    float: left;
+}
+
+.list .list-container .list-item .list-item-text input{
+    width: 100%;
+    height: 100%;
+}
+
+.list .list-container .list-item .list-item-controls,
+.list .list-name .list-name-controls{
+    float: right;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.list .list-name .list-name-controls{
+    float: left;
+    margin: 0px;
+}
+
+.list-content .top{
+    height: 20px;
+    margin-bottom: 30px;
+    background-color: #EFEFEF;
+    padding: 20px;
+    border-bottom: solid 1px #999999;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.list-content .bottom{
+    padding: 30px;
+}
+
+.list-content .top .name{
+    float: left;
+    font-weight: bold;
+}
+
+.list .list-container .list-item .list-item-controls div,
+.list-name .hide-list,
+.list-name .show-list,
+.hide-all, .show-all,
+.list .list-name .list-name-controls div{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.list-name .show-list,
+.list-name .hide-list,
+.hide-all, .show-all{
+    float: right;
+    width: 0;
+    height: 0;
+    margin-top: 6px;
+}
+
+.hide-all,
+.list-name .hide-list{
+    border-top: 8px solid #000;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.show-all,
+.list-name .show-list{
+    border-left: 8px solid #000;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.list .list-container .list-item .list-item-controls .list-item-controls-done,
+.list .list-name .list-name-controls .list-name-controls-done{
+    display: none;
+}
+
+.list .list-container .list-item .list-item-controls div img,
+.list .list-name .list-name-controls div img{
+    width: 100%;
+    height: 100%;
+}
+
+#article .list-content .new-list,
+#article .list .new-item{
+    border-bottom: solid 1px #999999;;
+    border-top: none;
+    overflow: hidden;
+    padding-top: 0px;
+}
+
+#article .list-content .new-list{
+    border: none;
+    margin-top: 30px;
+}
+
+#article .list-content .new-list div,
+#article .list .new-item div{
+    float: left;
+}
+
+#article .list-content .new-list .new-list-button,
+#article .list .new-item .new-item-button{
+    width: 110px;
+    background: rgba(0,0,100,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#000064', endColorstr='#000064'); /* IE shit */
+}
+
+#article .list-content .new-list .new-list-button{
+    width: 150px;
+}
+
+#article .list-content .new-list .new-list-input,
+#article .list .new-item .new-item-input{
+    margin: 2px 0px 0px 7px;
+    width: 280px;
+}
+
+#article .list-content .new-list .new-list-input{
+    width: 260px;
+}
+
+#article .list-content .new-list .new-list-input input,
+#article .list .new-item .new-item-input input{
+    width: 100%;
+}
+
+#list .list-name{
+    text-align: center;
+    font-size: 14px;
+}
+
+/* End Style for List */
+
+
+body #article, header{
+    display: block;
+}
+
+body #article{
+    /*height: 1500px;
+    background-color: #330000;*/
+    margin: 0px 300px;
+    overflow: hidden;
+}
+
+body #article .content{
+    margin: 40px 0px 0px;
+}
+
+body #article .content .modalLink{
+    margin: 30px 0px 20px 30px;
+    border: solid 1px #999999;
+    padding: 20px;
+    background-color: #fff;
+}
+
+body #footer{
+    height: 100px;
+    max-height: 20%;
+    width: 100%;
+    background-color: #999;
+    position: absolute;
+}
+
+body .footer-bottom{
+    bottom: 0px;
+}
